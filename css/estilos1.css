@@ -1,0 +1,30 @@
+body {
+    background-color: lightblue;
+}
+
+div {
+    font-size: 20px;
+}
+
+h2 {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.par1 {
+    color: navy;
+    font-weight: bold;
+}
+
+.par2 {
+    text-transform: uppercase;
+    text-align: justify;
+}
+
+.par3 {
+    font-size: 12px;
+}
+
+.par3 span {
+    font-style: italic;
+}

@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de fuentes y colores*/
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f9fafb; /* Color de fondo suave*/
+    color: #2c2e50; /* Color de texto principal*/
+    line-height: 1.6; /*Interlineado para legibilidad*/
+}
+
+.main-title {
+    font-family: "Montserrat", sans-serif;
+    color: #2980b9; /* Color del título principal */
+    font-size: 3em; /*Tamaño del titulo más grande*/
+    text-align: center;
+    margin-top: 20px; /* Espacio superior */
+}
+
+.subtitle {
+    font-family: "Montserrat", sans-serif;
+    color: #3498db; /* Color de subtítulo */
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px; /* Espacio inferior para separar contenido */
+}
+
+.intro-text {
+    font-size: 1.2em; /* Texto de introducción un poco más grande*/
+    color: #34495e;
+    text-align: center;
+}
+
+.country-section {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    margin-top: 30px; /* Espacio para separar secciones*/
+}
+
+.country-image {
+    width: 80%; /* Ajuste para responsive */
+    max-width: 500px; /* Tamaño maximo para mantener uniformidad*/
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrar las imagenes */
+}
+
+.country-section h3 {
+    color: #e74c3c;
+    font-size: 1.8em; /*Tamaño para los titulos de los nombres de los países*/
+    margin-bottom: 5px; /* Espacio entre el título y la imagen */
+}
+
+.country-section p {
+    font-size: 1em;
+    color: #2c3e50;
+    width: 80%;
+    margin: 0 auto 20px auto; /* Centrar parrafos y margen inferior */
+    text-align: justify; /* Justificar el texto para mejor presentación */
+}
+
+/*Estilo de enlaces*/
+a {
+    color: #8e44ad;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*Estilo de enlaces cuando tienen el puntero encima*/
+a:hover {
+    color: #9b59b6;
+    text-decoration: underline;
+}
+
+/*Estilos de tabla*/
+.country-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Quitar espacios entre celdas */
+}
+
+.country-table th,
+.country-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.country-table th {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+/*Estilo del footer*/
+.footer-text {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+    font-family: "Montserrat", sans-serif;
+}
