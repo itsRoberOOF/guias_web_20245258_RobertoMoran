@@ -147,7 +147,7 @@ span {
 
 /*Sección historia*/
 #mi-historia {
-    background-color: #393939;
+    background-color: #36393b;
     display: block;
     height: auto;
 }
@@ -327,9 +327,9 @@ span {
 
 #intereses .grid-6 div:nth-child(even) {
     background-color: #a5d8ff;
-    color: #393939;
+    color: #36393b;
     svg {
-        stroke: #393939;
+        stroke: #36393b;
     }
 }
 
@@ -385,6 +385,26 @@ span {
 
     svg {
         stroke: #09bc8a;
+    }
+}
+
+.contenedor-contacto a:nth-child(even):hover {
+    color: #36393b;
+    border: 2px solid #a5d8ff;
+    background-color: #a5d8ff;
+
+    svg {
+        stroke: #36393b;
+    }
+}
+
+.contenedor-contacto a:nth-child(odd):hover {
+    color: #36393b;
+    border: 2px solid #09bc8a;
+    background-color: #09bc8a;
+
+    svg {
+        stroke: #363636;
     }
 }
 
