@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Galindo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*Reiniciar css*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+/*Header + nav*/
+header {
+    background-color: #a5d8ff;
+    text-align: center;
+    height: 12vh;
+    padding: 2vh 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.titulo-header {
+    font-family: "Galindo", sans-serif;
+    font-size: 2.5rem;
+    color: #36393b;
+    font-weight: bolder;
+}
+
+.titulo-header::before {
+    content: "✨ ";
+}
+
+.titulo-header::after {
+    content: " ✨";
+}
+
+.menu {
+    position: fixed;
+    top: 12vh;
+    width: 100vw;
+    background-color: #a5d8ff;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #36393b;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 1vh 50px;
+}
+
+.menu a:hover {
+    background-color: #09bc8a;
+    color: white;
+}
+
+/*Main*/
+main {
+    background-color: #36393b;
+}
+
+section {
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    scroll-margin-top: 17vh; /*Deja el espacio que ocupa el header (fixed), así la sección aparece correctamente y no cortada*/
+}
+
+section h2 {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+    font-family: "Galindo", sans-serif;
+}
+
+section h2::before {
+    content: "~ ";
+}
+
+section h2::after {
+    content: " ~";
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+span {
+    color: #a5d8ff;
+    font-weight: bold;
+}
+
+/*Sección sobre mí*/
+.espacio-header {
+    height: 17vh;
+}
+
+#sobre-mi {
+    margin-top: 17vh;
+}
+
+#sobre-mi div {
+    width: 50%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #a5d8ff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px #09bc8a;
+}
+
+#sobre-mi img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#sobre-mi p {
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.5;
+    margin-right: 25%;
+    text-align: justify;
+}
+
+/*Sección historia*/
+#mi-historia {
+    background-color: #393939;
+    display: block;
+    height: auto;
+}
+
+#mi-historia article {
+    padding-bottom: 50px;
+}
+
+#mi-historia .his-ti {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+}
+
+#mi-historia h2 {
+    text-align: center;
+    color: white;
+}
+
+#mi-historia p {
+    font-size: 1.3rem;
+    color: white;
+    text-align: justify;
+    padding: 0 60px;
+}
+
+.img-historia-sd {
+    display: block;
+    width: 80%;
+    margin-right: 60px;
+    margin-left: auto;
+    background-color: #a5d8ff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px #09bc8a;
+}
+
+.img-historia-si {
+    display: block;
+    width: 80%;
+    margin-left: 60px;
+    margin-right: auto;
+    background-color: #a5d8ff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px #09bc8a;
+}
+
+.his-tic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.his-c {
+    width: 90%;
+    line-height: 1.8;
+}
+
+.his-c img {
+    display: block;
+    width: 60%;
+    margin: 30px auto 20px;
+    padding: 30px 100px;
+    background-color: #a5d8ff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px #09bc8a;
+}
+
+.his-it {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mul-img {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px 0 0;
+}
+
+.mul-img img {
+    display: block;
+    margin: 0;
+    height: 500px;
+    width: auto;
+    padding: 30px 50px;
+    background-color: #a5d8ff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px #09bc8a;
+}
+
+/*Sección educación*/
+#educacion {
+    background-color: #a5d8ff;
+}
+
+#educacion h2 {
+    color: #36393b;
+}
+
+.div-edu h3 {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.div-edu p {
+    margin: 80px 60px 0;
+    color: white;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.div-edu {
+    display: flex;
+    align-items: center;
+}
+
+.div-rical {
+    background-color: #1d1d1b;
+    width: 30%;
+}
+
+.div-rical img {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.div-esen {
+    background-color: #015595;
+    width: 30%;
+}
+
+.div-esen img {
+    display: block;
+    margin: 0 auto;
+    width: 35%;
+}
+
+/*Sección intereses*/
+#intereses .grid-6 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+#intereses .grid-6 div {
+    width: 33.33%;
+    height: 50%;
+    text-align: center;
+    padding: 5% 0;
+
+    svg {
+        width: 50%;
+        height: 50%;
+        stroke-width: 1.5;
+        margin-top: 25px;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+
+#intereses .grid-6 div:nth-child(odd) {
+    background-color: #36393b;
+    color: #a5d8ff;
+    svg {
+        stroke: #a5d8ff;
+    }
+}
+
+#intereses .grid-6 div:nth-child(even) {
+    background-color: #a5d8ff;
+    color: #393939;
+    svg {
+        stroke: #393939;
+    }
+}
+
+.titulo-intereses {
+    width: 40%;
+    background-color: #09bc8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Sección contacto*/
+.contenedor-contacto {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-contacto a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25.33%;
+    padding: 20px 0;
+    margin: 0 3%;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.5rem;
+
+    svg {
+        margin-right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.contenedor-contacto a:nth-child(even) {
+    color: #a5d8ff;
+    border: 2px solid #a5d8ff;
+
+    svg {
+        stroke: #a5d8ff;
+    }
+}
+
+.contenedor-contacto a:nth-child(odd) {
+    color: #09bc8a;
+    border: 2px solid #09bc8a;
+
+    svg {
+        stroke: #09bc8a;
+    }
+}
+
+/*Footer*/
+footer {
+    background-color: #a5d8ff;
+    text-align: center;
+    color: #36393b;
+    padding: 10px 0;
+}
+
+footer span {
+    color: #36393b;
+    font-weight: bolder;
+}

@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    text-align: justify;
+}
+
+header {
+    background: #16a085;
+    height: 130px;
+    overflow: hidden; /*Ocultar contenido q se sale*/
+}
+
+footer {
+    margin-top: 20px;
+    background: #16a085;
+    height: 50px;
+}
+
+header div,
+footer div {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section {
+    margin: 0 auto;
+    width: 90%;
+    overflow: hidden; /*Para ajustar el tamaño y no poner scroll*/
+    position: relative;
+}
+
+section article {
+    font-size: 0.9rem;
+    height: 340px;
+    width: 32.33%;
+    float: left; /*Flotar a la izq*/
+    margin: 0.5%;
+
+    border: 2px dashed #16a085;
+    padding: 1%;
+    box-sizing: border-box;
+
+    overflow: hidden; /*Ocultar contenido q se sale*/
+}
+
+section article img {
+    height: 180px;
+    max-width: 80%;
+    margin: 5px auto;
+    display: block;
+}
+
+section article h3 {
+    text-align: center;
+}
+
+footer div {
+    padding-top: 1rem;
+}
+
+/*Posicionamiento*/
+section article:nth-child(2) {
+    background-color: rgba(70, 130, 180, 0.9);
+    position: absolute;
+    /*position: relative;*/
+    left: 100px;
+    top: 50px;
+    /*display: none;*/
+    visibility: hidden;
+}
+
+/*
+    36. Diferencia entre position relative y absolute:
+
+        - Relative: El elemento se desplaza a partir de su posición original. Además, mantiene el espacio de su posición original, por eso se ve como un hueco.
+
+        - Absolute: El elemento se desplaza a partir de su contenedor más cercano (si no tiene, agarra el body) que no tenga una posición static. Su posición original no se mantiene, por eso no se ve ningún hueco y parece como que se sobrepone a los otros elementos.
+*/
+
+/*
+    40. Diferencia entre visibility hidden y display none:
+
+        Ambos hacen que el elemento no se muestre en la página, pero hay una diferencia:
+
+        - Visibility hidden: Mantiene el espacio que el elemento ocupa en la página. Aunque no se ve, se puede notar su caja usando el inspeccionar elemento.
+
+        - Display none: No se mantiene el espacio del elemento, es como si no existiera.
+*/
