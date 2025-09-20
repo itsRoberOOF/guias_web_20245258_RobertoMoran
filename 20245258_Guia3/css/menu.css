@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+}
+
+/*Estilos generales*/
+nav ul {
+    list-style-type: none; /*Quitar las viñetas*/
+}
+
+nav li {
+    line-height: 2.5em;
+}
+
+nav a {
+    color: #ddd;
+    display: block;
+    padding: 0 2.5em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*Primer nivel*/
+nav > ul {
+    background-color: #333;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+nav > ul > li > ul {
+    position: absolute;
+    display: none;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+}
+
+nav > ul > li > ul > li {
+    background-color: #222;
+}
