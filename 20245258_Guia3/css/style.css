@@ -14,12 +14,22 @@ header {
     background: #16a085;
     height: 130px;
     overflow: hidden; /*Ocultar contenido q se sale*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 footer {
     margin-top: 20px;
     background: #16a085;
     height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 header div,
@@ -40,17 +50,18 @@ h2 {
 }
 
 section {
-    margin: 0 auto;
+    margin: 130px auto 70px;
     width: 90%;
-    overflow: hidden; /*Para ajustar el tamaño y no poner scroll*/
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 section article {
     font-size: 0.9rem;
     height: 340px;
     width: 32.33%;
-    float: left; /*Flotar a la izq*/
+    /*float: left; Flotar a la izq*/
     margin: 0.5%;
 
     border: 2px dashed #16a085;
@@ -78,12 +89,13 @@ footer div {
 /*Posicionamiento*/
 section article:nth-child(2) {
     background-color: rgba(70, 130, 180, 0.9);
-    position: absolute;
+    position: static;
     /*position: relative;*/
+    /*position: static;*/
     left: 100px;
     top: 50px;
-    /*display: none;*/
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
 }
 
 /*
