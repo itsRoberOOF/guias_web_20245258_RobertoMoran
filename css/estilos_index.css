@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --celeste_activo: #add8e6;
+    --celeste_activo: #a5d8ff;
     --celeste_hover: deepskyblue;
     --fondo: #222;
     --gris: #a3a39f;
+    --fondo_svg: #363b3c;
 }
 
 * {
@@ -12,6 +13,44 @@
     padding: 0;
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
+}
+
+header {
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-column {
+    flex-direction: column;
+}
+
+header div {
+    flex-grow: 1;
+}
+
+.volver {
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.volver svg {
+    stroke: var(--celeste_activo);
+}
+.volver:hover {
+    background-color: var(--celeste_activo);
+}
+
+.volver:hover svg {
+    stroke: var(--fondo);
+    stroke-width: 1.5px;
 }
 
 body {
@@ -30,8 +69,28 @@ h1 {
 h2 {
     color: var(--gris);
     font-size: 1.3rem;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
+}
+
+h2::after {
+    content: "✨";
+    margin-left: 5px;
+}
+
+h2::before {
+    content: "✨";
+    margin-right: 5px;
+}
+
+.entrega::before {
+    content: "📝";
+    margin-right: 5px;
+}
+
+.entrega::after {
+    content: "📅";
+    margin-left: 5px;
 }
 
 main {
@@ -64,15 +123,114 @@ h3 {
 .items {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .items a {
     text-decoration: none;
-    width: 40%;
+    margin-right: 5%;
     border: 1px solid var(--celeste_activo);
     border-radius: 10px;
-    padding: 10px 0;
+    padding: 15px 0;
+
+    color: var(--celeste_activo);
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex-grow: 1;
 
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.items a p {
+    margin-right: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.items a:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.items a:hover {
+    border: 1px solid var(--celeste_hover);
+    color: var(--celeste_hover);
+    box-shadow: 0 0 10px var(--celeste_hover);
+    transition: all 0.3s;
+    text-decoration: underline;
+}
+
+.items a svg {
+    stroke: var(--celeste_activo);
+    stroke-width: 1.5px;
+    background-color: var(--fondo_svg);
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+.items a:hover svg {
+    stroke: var(--celeste_hover);
+    transition: all 0.3s;
+}
+
+/*Responsive*/
+@media (max-width: 480px) {
+    main,
+    header {
+        width: 90%;
+    }
+
+    .items {
+        row-gap: 20px;
+    }
+
+    .items a {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    main,
+    header {
+        width: 85%;
+    }
+
+    .items {
+        row-gap: 25px;
+    }
+
+    .items a {
+        width: 40%;
+    }
+
+    .items a:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    main,
+    header {
+        width: 80%;
+    }
+
+    .items {
+        row-gap: 40px;
+    }
+
+    .items a {
+        width: 30%;
+    }
+
+    .items a:nth-child(3n) {
+        margin-right: 0;
+    }
 }
