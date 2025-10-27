@@ -12,7 +12,7 @@ nav ul {
 nav ul li {
     float: left;
     margin: 0px -15px;
-    padding: 10px 0px 0px 0px;
+    padding: 0;
     border-top: solid 2px white;
     border-bottom: solid 2px white;
 }
