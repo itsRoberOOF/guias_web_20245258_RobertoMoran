@@ -1,0 +1,26 @@
+@import url("../bootstrap/icons/bootstrap-icons.css");
+
+:root {
+    --user-green: #28A682;
+}
+
+.bi-2 {
+    font-size: 1.8rem;
+}
+
+.nav-bar>li>a:hover {
+    background: var(--user-green);
+}
+
+.nav-bar-li-active{
+    background: var(--user-green);
+}
+
+body{
+    margin-top: 5%;
+}
+
+textarea{
+    height: 100px !important;
+    resize: none;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+        <title>Utilizando estructuras de control</title>
+    </head>
+
+    <body>
+        <main class="d-flex flex-nowrap">
+            <div
+                class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark nav-bar"
+            >
+                <a
+                    href="../index.html"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+                >
+                    <img
+                        src="../img/js.png"
+                        alt=""
+                        width="32"
+                        height="32"
+                        class="me-2"
+                    />
+
+                    <span class="fs-4">JavaScript</span>
+                </a>
+                <hr />
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a
+                            href="../pages/registroAcademico.html"
+                            class="nav-link text-white active"
+                        >
+                            <i
+                                class="bi bi-file-spreadsheet"
+                                role="img"
+                                aria-label="RegistroAcademico"
+                            ></i>
+                            Registro académico
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="../pages/tablasMultiplicar.html"
+                            class="nav-link text-white"
+                        >
+                            <i
+                                class="bi bi-person-workspace"
+                                role="img"
+                                aria-label="TablasMultiplicar"
+                            ></i>
+                            Tablas de multiplicar
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="../pages/promedioNotas.html"
+                            class="nav-link text-white"
+                        >
+                            <i
+                                class="bi bi-file-earmark-medical"
+                                role="img"
+                                aria-label="Promedio"
+                            ></i>
+                            Promedio notas
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="../pages/arreglo.html"
+                            class="nav-link text-white"
+                        >
+                            <i
+                                class="bi bi-box"
+                                role="img"
+                                aria-label="Arreglo"
+                            ></i>
+                            Arreglo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="d-flex flex-column flex-shrink-0 p-3 colum-container contenedor"
+            >
+                <div class="container-fluid py-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="h-100 p-4 bg-light border rounded-3">
+                                <h3>Datos de estudiantes</h3>
+                                <form onsubmit="return false">
+                                    <div class="row mb-3">
+                                        <label
+                                            for="inputCarnet"
+                                            class="col-sm-2 col-form-label"
+                                            >Carnet</label
+                                        >
+                                        <div class="col-sm-10">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="inputCarnet"
+                                                maxlength="8"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label
+                                            for="inputNombre"
+                                            class="col-sm-2 col-form-label"
+                                            >Nombres</label
+                                        >
+                                        <div class="col-sm-10">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="inputNombre"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label
+                                            for="inputApellido"
+                                            class="col-sm-2 col-form-label"
+                                            >Apellidos</label
+                                        >
+                                        <div class="col-sm-10">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="inputApellido"
+                                            />
+                                        </div>
+                                    </div>
+                                    <button
+                                        type="button"
+                                        class="btn btn-success"
+                                        id="idBtnAgregarEstudiante"
+                                    >
+                                        <i
+                                            class="bi bi-person-plus-fill"
+                                            height="16"
+                                            width="16"
+                                        ></i
+                                        >Registrar
+                                    </button>
+                                    <button
+                                        type="button"
+                                        class="btn btn-primary"
+                                        id="idBtnMostrarEstudiantes"
+                                    >
+                                        <i class="bi bi-person-lines-fill"></i
+                                        >Mostrar estudiantes
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-12 py-5">
+                            <h3>Estudiantes registrados</h3>
+                            <div id="idContainerEstudiantes">Ninguno</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/registroAcademicoLocalStorage.js" defer></script>
+    </body>
+</html>

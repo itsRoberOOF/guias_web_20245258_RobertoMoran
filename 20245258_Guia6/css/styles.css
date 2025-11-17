@@ -1,0 +1,48 @@
+@import url("../bootstrap/icons/bootstrap-icons.css");
+
+:root {
+    --violet: 112.520718, 44.062154, 249.437846;
+    --green: 25, 135, 84;
+}
+
+.colum {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(var(--violet), 0.1);
+    border: 1px solid rgba(var(--violet), 0.25);
+}
+
+.colum-green {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    background-color: rgba(var(--green), 0.1);
+    border: 1px solid rgba(var(--green), 0.25);
+}
+
+.contenedor {
+    overflow-y: auto;
+}
+
+body {
+    min-height: 100vh;    
+}
+
+main {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.nav-bar {
+    width: 280px;
+}
+
+.nav>li:hover {
+    background-color: darkgray;
+    border-radius: 0.375rem;
+}
+
+.colum-container {
+    width: calc(100% - 280px);
+}
