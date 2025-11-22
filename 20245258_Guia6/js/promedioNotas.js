@@ -1,4 +1,4 @@
-const containerEstudiantes = document.querySelector("#idContainerEstudiantes"); 
+const containerEstudiantes = document.querySelector("#idContainerEstudiantes");
 
 const btnPromedio = document.querySelector("#idBtnPromedio");
 
@@ -8,12 +8,12 @@ function generarEstudiantes() {
     let arrayEstudiante = new Array();
 
     let totalEstudiantes = document.querySelector("#inputNumeroEstudiantes").value;
-    let contador = 1; 
+    let contador = 1;
 
-    let estudiante, calificacion, convertir = 0; 
+    let estudiante, calificacion, convertir = 0;
 
     while (contador <= totalEstudiantes) {
-        
+
         estudiante = prompt(`Ingrese el nombre del estudiante ${contador}:`);
 
         do {
@@ -25,19 +25,19 @@ function generarEstudiantes() {
         contador++;
     }
 
-    let calificacionAlta = 0, promedio = 0, posicion = 0; 
+    let calificacionAlta = 0, promedio = 0, posicion = 0;
 
     let listado = "<h3>Listado de estudiantes registrados</h3>";
     listado += "<ol>";
 
     for (let indice of arrayEstudiante) {
         let nombre = indice[0];
-        let nota = indice[1];
-        
+        let nota = parseFloat(indice[1]);
+
         listado += `<li><b>Nombre:</b> ${nombre} - <b>Calificación:</b> ${nota}</li>`;
         if (nota > calificacionAlta) {
             calificacionAlta = nota;
-            posicion = indice; 
+            posicion = indice;
         }
         promedio += parseFloat(nota);
     }

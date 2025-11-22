@@ -75,7 +75,7 @@ const validarFormulario = () => {
     }
 
     if (errores.length > 0) {
-        alert("Errores encontrados:\n\n- " + errores.join("\n- "));
+        alert("Validaciones:\n- " + errores.join("\n- "));
     } else {
         datosTabla = [
             { campo: "Nombres", valor: nombre.value },
