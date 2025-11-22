@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Objetos en JavaScript</title>
+
+</head>
+
+<body>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="../img/js.png" class="bi me-2" width="48" height="48">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../pages/ejemplo1.html" class="nav-link px-2 text-warning fw-bold">
+                            <i class="bi bi-check"></i> Ejemplo 1
+                        </a></li>
+                    <li><a href="../pages/ejemplo2.html" class="nav-link px-2 text-white">Ejemplo 2</a></li>
+                    <li><a href="../pages/ejemplo3.html" class="nav-link px-2 text-white">Ejemplo 3</a></li>
+                    <li><a href="../pages/ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>                    
+                </ul>
+
+                <div class="text-end">
+                    <button type="button" id="idBtnDiv" class="btn btn-outline-light me-2">Nuevo registro</button>
+                    <button type="button" id="idBtnButton" class="btn btn-warning">Ingresar</button>
+                </div>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold">Creando formulario con DOM</h1>
+            <form class="row g-0 text-center">
+                <div class="col-sm-12">
+                    <select class="form-select w-50 d-inline" id="idCmbElemento" aria-label="Seleccione el elemento a crear">
+                        <option value="" selected>Seleccione un elemento</option>
+                        <option value="text"> &lt;input type="text" /&gt;</option>
+                        <option value="number"> &lt;input type="number" /&gt;</option>
+                        <option value="date"> &lt;input type="date" /&gt;</option>
+                        <option value="password"> &lt;input type="password" /&gt;</option>
+                        <option value="radio"> &lt;input type="radio" /&gt;</option>
+                        <option value="checkbox"> &lt;input type="checkbox" /&gt;</option>
+                        <option value="select"> &lt;select&gt;&lt;/select&gt;</option>
+                        <option value="textarea"> &lt;textarea&gt;&lt;/textarea&gt;</option>
+                        <option value="color"> &lt;input type="color" /&gt;</option>
+                        <option value="email"> &lt;input type="email" /&gt;</option>
+                    </select>
+
+                    <button type="button" id="idBtnCrear" class="btn btn-primary d-inline">Crear elemento</button>
+
+                    <div class="mt-3">
+                        <button type="button" id="idBtnValidar" class="btn btn-dark">Validar form</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="fw-bold">Elementos agregados al nuevo formulario</h2>
+            </div>
+            <div class="col"></div>
+            <div class="col">                
+                <form id="idNewForm" class="row g-0"></form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- COMPONENTE MODAL DE BOOTSTRAP-->
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Agregando un nuevo control</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="idFormElemento">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="idTituloElemento"
+                                placeholder="Texto del control">
+                            <label for="idTituloElemento">
+                                <i class="bi bi-tag"></i> Titulo del control
+                            </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="idNombreElemento"
+                                placeholder="Nombre del control">
+                            <label for="idNombreElemento">
+                                <i class="bi bi-tag"></i> Nombre del control
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="idBtnAddElement" data-bs-dismiss="modal">
+                        <i class="bi bi-plus-circle"></i> Agregar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ejemplo1.js" defer></script>
+
+</body>
+
+</html>

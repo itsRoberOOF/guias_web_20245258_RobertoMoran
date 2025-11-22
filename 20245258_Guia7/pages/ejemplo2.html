@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Objetos en JavaScript</title>
+
+</head>
+
+<body>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="../img/js.png" class="bi me-2" width="48" height="48">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../pages/ejemplo1.html" class="nav-link px-2 text-white">Ejemplo 1</a></li>
+                    <li><a href="../pages/ejemplo2.html" class="nav-link px-2 text-warning fw-bold">
+                            <i class="bi bi-check"></i> Ejemplo 2
+                        </a></li>
+                    <li><a href="../pages/ejemplo3.html" class="nav-link px-2 text-white">Ejemplo 3</a></li>
+                    <li><a href="../pages/ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>                    
+                </ul>
+
+                <div class="text-end">
+                    <button type="button" id="idBtnDiv" class="btn btn-outline-light me-2">Nuevo registro</button>
+                    <button type="button" id="idBtnButton" class="btn btn-warning">Ingresar</button>
+                </div>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="row px-4 my-5">
+            <div class="col-12">
+                <h1 class="display-5 fw-bold text-center py-5 ">Recorriendo un formulario con DOM</h1>
+                <form name="frmRegistro">
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idNombre" class="form-label fw-bold">Nombres</label>
+                                <input type="text" class="form-control" id="idNombre">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idApellidos" class="form-label fw-bold">Apellidos</label>
+                                <input type="text" class="form-control" id="idApellidos">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idFechaNac" class="form-label fw-bold">Fecha nacimiento</label>
+                                <input type="date" class="form-control" id="idFechaNac">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idCorreo" class="form-label fw-bold">Correo electrónico</label>
+                                <input type="email" class="form-control" id="idCorreo"
+                                    aria-describedby="idCorreoSugerencia">
+                                <div id="idCorreoSugerencia" class="form-text">
+                                    Nunca compartiremos su correo electrónico con nadie más.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idPassword" class="form-label fw-bold">Contraseña</label>
+                                <input type="password" class="form-control" id="idPassword">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idPasswordRepetir" class="form-label fw-bold">Repetir Contraseña</label>
+                                <input type="password" class="form-control" id="idPasswordRepetir">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <span class="fw-bold">Seleccione algunos interes</span>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="idCkProgramacion">
+                                <label class="form-check-label" for="idCkProgramacion">Programacion</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="idCkBD">
+                                <label class="form-check-label" for="idCkBD">Base de Datos</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="idCkRedes">
+                                <label class="form-check-label" for="idCkRedes">Inteligencia artificial</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="idCkSeguridad">
+                                <label class="form-check-label" for="idCkSeguridad">Seguridad informatica</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <span class="fw-bold">¿Que carrera estudia?</span>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="radio" class="form-check-input" name="idRdCarrera" id="idRdIng">
+                                <label class="form-check-label" for="idRdIng">Ingeniería de Software y Negocios Digitales</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="radio" class="form-check-input" name="idRdCarrera" id="idRdLic">
+                                <label class="form-check-label" for="idRdLic">Licenciatura en Economía y Negocios</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="radio" class="form-check-input" name="idRdCarrera" id="idRdTec">
+                                <label class="form-check-label" for="idRdTec">Ingeniería de Negocios</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="radio" class="form-check-input" name="idRdCarrera" id="idRdOtro">
+                                <label class="form-check-label" for="idRdOtro">Otra</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idCmPais" class="form-label fw-bold">País de origen</label>
+                                <select class="form-select" id="idCmPais">
+                                    <option selected>Seleccione una opcion</option>
+                                    <option value="1">EL Salvador</option>
+                                    <option value="2">Guatemala</option>
+                                    <option value="3">Honduras</option>
+                                    <option value="4">Panama</option>
+                                    <option value="5">Costa Rica</option>
+                                    <option value="6">Belice</option>
+                                    <option value="7">Nicaragua</option>
+                                    <option value="8">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <label for="idArchivo" class="form-label fw-bold">Seleccione la imagen de su
+                                    avatar</label>
+                                <input class="form-control" type="file" id="idArchivo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-end">
+                            <button type="button" class="btn btn-primary" name="btnRegistro"><i
+                                    class="bi bi-check"></i>Enviar
+                                registro</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- COMPONENTE MODAL DE BOOTSTRAP-->
+    <div class="modal fade" id="idModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalLabel">Agregando un nuevo control</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="idBodyModal">                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        <i class="bi bi-closed"></i> Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ejemplo2.js" defer></script>
+
+</body>
+
+</html>

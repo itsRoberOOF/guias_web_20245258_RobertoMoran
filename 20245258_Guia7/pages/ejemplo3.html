@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Objetos en JavaScript</title>
+
+</head>
+
+<body>
+
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="../img/js.png" class="bi me-2" width="48" height="48">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../pages/ejemplo1.html" class="nav-link px-2 text-white">Ejemplo 1</a></li>
+                    <li><a href="../pages/ejemplo2.html" class="nav-link px-2 text-white">Ejemplo 2</a></li>
+                    <li><a href="../pages/ejemplo3.html" class="nav-link px-2 text-warning fw-bold">
+                            <i class="bi bi-check"></i> Ejemplo 3
+                        </a></li>
+                    <li><a href="../pages/ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <button type="button" id="idBtnDiv" class="btn btn-outline-light me-2">Nuevo registro</button>
+                    <button type="button" id="idBtnButton" class="btn btn-warning">Ingresar</button>
+                </div>
+            </div>
+    </header>
+
+    <div class="container">
+        <div class="px-4 py-5 my-5">
+            <h1 class="display-5 text-center fw-bold">Manipulando colores con el DOM</h1>
+            <form class="row g-0">
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="idFondo" class="form-label fw-bold">Cambiando el color del fondo</label>
+                            <input type="color" class="form-control form-control-color" id="idFondo" name="idFondo"
+                                title="Modificando el color del fondo">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="idTitulos" class="form-label fw-bold">Cambiando el color los titulos</label>
+                            <input type="color" class="form-control form-control-color" id="idTitulos" name="idTitulos"
+                                title="Modificando el color de los titulos">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="idParrafos" class="form-label fw-bold">Cambiando el color los parrafos</label>
+                            <input type="color" class="form-control form-control-color" id="idParrafos"
+                                name="idParrafos" title="Modificando el color de los titulos">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                            <button type="button" id="idBtnAumentar" class="btn btn-success">Aumentar tamaño de
+                                letra</button>
+                            <button type="button" id="idBtnDisminuir" class="btn btn-primary">Disminuir tamaño de
+                                letra</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col  mx-auto">
+                <h1 class="display-5 fw-bold">¿Qué es el DOM?</h1>
+                <p class="lead mb-4">
+                    Las siglas <span class="fw-bold">DOM</span> significan <span class="fw-bold">Document
+                        Object Model</span>,
+                    o lo que es lo mismo, la estructura del documento HTML. Una página HTML está formada por
+                    múltiples etiquetas HTML,
+                    anidadas una dentro de otra, formando un árbol de etiquetas relacionadas entre sí, que
+                    se
+                    denomina <span class="fw-bold">árbol DOM</span> (o simplemente DOM).
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ejemplo3.js" defer></script>
+
+</body>
+
+</html>
